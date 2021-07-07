@@ -1,0 +1,88 @@
+.hamburger__container{
+  text-align: left;
+  font-size: 2.5em;
+  letter-spacing: 4.8px;
+  color: #FFFFFF;
+  padding-top: 25px;
+  padding-left: 25px;
+  position:relative;
+  display: flex;
+  overflow: hidden;
+  height: 300px;
+  width: 400px;
+}
+
+.container {
+  position: initial;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  padding-right: 12px;
+
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 2.5px 0;
+  transition: 0.4s;
+}
+#hamburger__logo{
+  display: flex;
+  position: absolute;
+  z-index: 2;
+}
+:root {
+  --border-inner: #ff390a;
+  --border-outer: #ff390a;
+
+}
+
+.hamburger__border{
+  position: relative;
+  opacity:0;
+  top: -30%;
+  left: -44%;
+  background-color: var(--border-inner);
+  //background-color:black;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  //border-width: 0vh;
+  border-bottom: 10px solid var(--border-outer);
+  border-right: 10px solid var(--border-outer);
+  z-index: 1;
+
+
+}
+
+.expanded{
+  opacity: 1;
+  background-color: var(--border-inner);
+  height: 400px;
+  width: 350px;
+  transition: 1s;
+  border-bottom: 12px solid var(--border-outer);
+  border-right: 480px solid var(--border-outer);
+}
+
+
+//This looks like a silly egg shape.
+//.expanded{
+//  /*top: -15px;
+//  left: -15px;*/
+//  //border-top:15vh solid purple;
+//  //border-bottom: 150vh solid purple;
+//  //border-right: 150vh solid purple;
+//  height: 500px;
+//  width: 500px;
+//  border-width: 150vh;
+//  border-radius: 50%;
+//  background-color: purple;
+//  transition: 0.4s;
+//  border-bottom: 150px solid;
+//}

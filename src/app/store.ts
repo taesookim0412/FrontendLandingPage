@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
+import heroReducer from './../Landing/Hero/heroSlice'
+import cursorReducer from './../Cursor/cursorSlice'
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
+    hero: heroReducer,
+    cursor: cursorReducer
   },
 });
 
