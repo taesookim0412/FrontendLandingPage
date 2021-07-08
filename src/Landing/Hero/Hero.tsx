@@ -37,7 +37,7 @@ export function Hero(){
                 <div id={"message"}>
                     Experience your favourite artists like never before and from the comfort of your own home.
                 </div>
-                <div id={"button"}>
+                <div id={"button"} onClick={() => window.scrollTo({top: Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) * 3, left: 0, behavior:"smooth"} )}>
                     {/*<HoverButton text={"TRY IT NOW"} fontSize={"0.6em"}/>*/}
                     <LiquidButton/>
                 </div>

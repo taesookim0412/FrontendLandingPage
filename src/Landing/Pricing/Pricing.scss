@@ -1,0 +1,67 @@
+#pricing{
+  height: 100vh;
+  width: 100vw;
+  background-color: #191919;
+  overflow: hidden;
+  #grid{
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    text-align: left;
+    hr{
+      display: table-caption;
+      text-align: left;
+      width: 50px;
+    }
+    .title{
+      font-size:0.8em;
+      font-weight: 600;
+    }
+    .plan{
+      font-size:1.0em;
+      font-weight: 600;
+
+    }
+    .price{
+      padding: 10px 0 15px;
+      font-size:2.0em;
+      font-weight: 600;
+    }
+
+    #basic{
+      font-size: 1.5em;
+      color: #D24848;
+    }
+    #advanced{
+      font-size: 1.5em;
+      color: #FFB33F;
+    }
+    #pro{
+      font-size: 1.5em;
+      color: #1FE1E9;
+    }
+    ul{
+      letter-spacing: 1.5px;
+      color: white;
+      list-style: inside;
+      li:before{
+        content: "";
+        margin-left: -0.5em;
+      }
+      li{
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #reveal{
+    #grid{
+      .padding{
+        display: none;
+      }
+    }
+  }
+
+}

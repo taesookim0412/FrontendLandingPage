@@ -1,9 +1,15 @@
 import "./HoverButton.scss"
+import {Props} from "react";
 
 type ButtonProps = {
-    text: string,
-    fontSize: string
+    text?: string,
+    fontSize?: string,
+    backgroundColor?: string,
+    color?: string,
+    padding?: string
 }
+//long padding: "1.2em 4.5em"
+
 
 export function HoverButton(props: ButtonProps){
     // @ts-ignore
@@ -17,7 +23,15 @@ export function HoverButton(props: ButtonProps){
         e.target.style.setProperty('--y', y + 'px');
     }
 
-    return (<button style={{fontSize: props.fontSize}} onMouseMove={(e) => handleButtonMove(e) } className="button">
+    const newStyle = {}
+    for (let [key, value] of Object.entries(props)){
+        if (value !== ""){
+            // @ts-ignore
+            newStyle[key] = value;
+        }
+    }
+
+    return (<button style={newStyle} onMouseMove={(e) => handleButtonMove(e) } className="button">
         <span>{props.text}</span>
     </button>)
 }

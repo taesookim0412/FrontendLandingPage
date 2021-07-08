@@ -1,6 +1,52 @@
-#sound{
+#sound {
+  position: relative;
   height: 100vh;
   width: 100vw;
   background-color: #D34848;
   overflow: hidden;
+
+  #button__topright {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+  }
+
+  #messages {
+    text-align: left;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    letter-spacing: 3px;
+
+    #title {
+      font-size: 3.5em;
+      color: white;
+    }
+
+    #message {
+      font-size: 3em;
+      width: 800px;
+    }
+
+    #button {
+      padding-top: 25px;
+    }
+  }
+    #boombox__1{
+      position: absolute;
+      top:16%;
+      left:63%;
+    }
+    #boombox__2{
+      position: absolute;
+      top: 38%;
+      left: 80%;
+    }
+  .boombox{
+    width: 12%;
+    height: auto;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
 }
+
+

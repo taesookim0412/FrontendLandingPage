@@ -13,9 +13,24 @@ import {
 import {useAppDispatch, useAppSelector} from "../app/hooks";
 
 export function captureMouse(e: React.MouseEvent, dispatch: ThunkDispatch<any, any, any>){
-    //Incorrect position for aesthetics.
-    dispatch(setLeft(e.pageX + 10))
-    dispatch(setTop(e.pageY - 20))
+    // Uses page for normal parent div
+    // dispatch(setLeft(e.pageX + 0))
+    // dispatch(setTop(e.pageY - 0))
+    // Uses seperate values for relative parent
+    // @ts-ignore
+    // console.log((e.nativeEvent.layerX,e.nativeEvent.layerY)) //buggy
+    // console.log((e.nativeEvent.clientX,e.nativeEvent.clientY))// off
+    // console.log((e.nativeEvent.offsetX,e.nativeEvent.offsetY))//buggy
+    // console.log((e.nativeEvent.x,e.nativeEvent.y))
+    // @ts-ignore
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    if (e.pageY > 2 * vh) return;
+
+    // @ts-ignore
+    // @ts-ignore
+    dispatch(setLeft(e.nativeEvent.clientX))
+    // @ts-ignore
+    dispatch(setTop(e.pageY - vh - 10))
 }
 
 export interface CursorProps{
