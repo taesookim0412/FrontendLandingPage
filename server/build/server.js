@@ -11,6 +11,7 @@ var getMainDirectory = function (folderName) {
         return path.join(__dirname, "..", "..", folderName);
     }
     else {
+        console.log(path.join(__dirname, "..", folderName));
         return path.join(__dirname, "..", folderName);
     }
 };

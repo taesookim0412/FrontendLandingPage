@@ -10,6 +10,7 @@ let getMainDirectory = (folderName: string) => {
     if (strs.includes("build")) {
         return path.join(__dirname, "..", "..", folderName)
     } else {
+        console.log(path.join(__dirname, "..", folderName))
         return path.join(__dirname, "..", folderName)
     }
 }
